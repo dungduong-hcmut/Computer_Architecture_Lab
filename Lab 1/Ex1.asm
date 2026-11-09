@@ -11,7 +11,7 @@ main:
     li $v0, 8
     syscall
 
-    # Remove newline
+    # Remove newline \n = 10
     la $t0, strIn
 
 remove_newline:
@@ -41,5 +41,5 @@ print:
     syscall
 
     # Exit
-    li $v0, 10
+    li $v0, 10  
     syscall

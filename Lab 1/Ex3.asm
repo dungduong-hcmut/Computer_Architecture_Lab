@@ -1,8 +1,8 @@
 .data
-	prompt1: .asciiz "Insert a:"
-	prompt2: .asciiz "Insert b:"
-	prompt3: .asciiz "Insert c:"
-	prompt4: .asciiz "Insert d:"
+	prompt1: .asciiz "Insert a: "
+	prompt2: .asciiz "Insert b: "
+	prompt3: .asciiz "Insert c: "
+	prompt4: .asciiz "Insert d: "
 	prompt5: .asciiz "F = "
 	prompt6: .asciiz ", "
 	prompt7: .asciiz "remainder = "

@@ -2,6 +2,7 @@
 	prompt1: .asciiz "Please enter a positive integer less than 16:"
 	prompt2: .asciiz "Its binary form is: "
 .text
+	addi $a1, $zero, 16
 	#print prompt1
 	li $v0, 4
 	la $a0, prompt1
@@ -11,6 +12,9 @@
 	li $v0, 5
 	syscall
 	move $t0, $v0
+	
+	bge $t0, $a1, exit
+	beq $t0, $zero, exit
 	
 	#calculate
 	addi $t1, $0, 2 #i = 2
@@ -43,15 +47,19 @@
 	add $a0, $0, $t5
 	li $v0, 1
 	syscall
+	
 	add $a0, $0, $t4
 	li $v0, 1
 	syscall
+	
 	add $a0, $0, $t3
 	li $v0, 1
 	syscall
+	
 	add $a0, $0, $t2
 	li $v0, 1
 	syscall
-	
+
+exit:
 	li $v0, 10
 	syscall
